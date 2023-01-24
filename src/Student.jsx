@@ -6,6 +6,7 @@ const Students = () => {
 
   const [index, setIndex] = useState(0)
   const [bioState, setBioState] = useState(false)
+  const [scoreState, setScoreState] = useState(false)
   let student = studentList[index]
 
 
@@ -18,6 +19,10 @@ const Students = () => {
   function toggleBio(evt) {
     setBioState(!bioState)
     evt.target.textContent === 'Show Bio' ? evt.target.textContent = 'Hide Bio' : evt.target.textContent = 'Show Bio'
+  }
+
+  function toggleScores(evt) {
+    setScoreState(!scoreState)
   }
 
   return (
@@ -33,9 +38,14 @@ const Students = () => {
         Show Bio
       </button>
       {bioState && <h2>{student.bio}</h2>}
-      {student.scores.map((score, idx) =>
-        <Score num={idx} key={idx} score={score}/>
-      )}
+      <button onClick={toggleScores}>
+        Show Scores
+      </button>
+      {scoreState && <div>
+        {student.scores.map((score, idx) =>
+          <Score num={idx} key={idx} score={score}/>
+        )}
+      </div>}
     </>
   )
 }
