@@ -33,7 +33,9 @@ const Students = () => {
         Show Bio
       </button>
       {bioState && <h2>{student.bio}</h2>}
-      <Score />
+      {student.scores.map((score, idx) =>
+        <Score num={idx} key={idx} score={score}/>
+      )}
     </>
   )
 }

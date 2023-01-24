@@ -1,10 +1,10 @@
 import './App.css';
-import Students from './Students';
+import Student from './Student';
 
 function App() {
   return (
     <>
-      <Students />
+      <Student />
     </>
   );
 }
