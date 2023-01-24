@@ -1,5 +1,6 @@
 import { studentList } from "./data"
 import { useState } from "react";
+import Score from "./Score";
 
 const Students = () => {
 
@@ -32,6 +33,7 @@ const Students = () => {
         Show Bio
       </button>
       {bioState && <h2>{student.bio}</h2>}
+      <Score />
     </>
   )
 }
