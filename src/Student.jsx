@@ -28,25 +28,33 @@ const Students = () => {
 
   return (
     <>
-      <button onClick={handleClick}>
-        Next
-      </button>
-      <button onClick={handleClick}>
-        Previous
-      </button>
       <h1>{student.name}</h1>
-      <button onClick={toggleBio}>
-        Show Bio
-      </button>
-      {bioState && <h2>{student.bio}</h2>}
-      <button onClick={toggleScores}>
-        Show Scores
-      </button>
-      {scoreState && <div>
-        {student.scores.map((score, idx) =>
-          <Score num={idx} key={idx} score={score}/>
-        )}
-      </div>}
+      <div className="btns-container">
+        <button onClick={handleClick}>
+          Previous
+        </button>
+        <div className="content-btns-container">
+          <button onClick={toggleBio}>
+            Show Bio
+          </button>
+          <button onClick={toggleScores}>
+            Show Scores
+          </button>
+        </div>
+        <button onClick={handleClick}>
+          Next
+        </button>
+      </div>
+      <div className="details-container">
+        {bioState && <h2 className="bio">{student.bio}</h2>}
+        {scoreState &&
+          <div className="scores">
+            {student.scores.map((score, idx) =>
+              <Score num={idx} key={idx} score={score}/>
+            )}
+          </div>
+        }
+      </div>
     </>
   )
 }

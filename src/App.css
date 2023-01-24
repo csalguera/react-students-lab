@@ -1,0 +1,33 @@
+.bio,
+.scores {
+  border: solid 1px black;
+  width: 400px;
+}
+
+h1 {
+  text-align: center;
+}
+
+button {
+  width: 100px;
+  height: 50px;
+}
+
+.btns-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.content-btns-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.details-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
