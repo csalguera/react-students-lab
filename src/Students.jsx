@@ -1,9 +1,13 @@
 import { studentList } from "./data"
+import { useState } from "react";
 
 const Students = () => {
-  console.log(studentList);
+
+  const [index, setIndex] = useState(0)
+  let student = studentList[index]
   return (
     <>
+      <h1>{student.name}</h1>
     </>
   )
 }
