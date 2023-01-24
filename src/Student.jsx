@@ -23,6 +23,7 @@ const Students = () => {
 
   function toggleScores(evt) {
     setScoreState(!scoreState)
+    evt.target.textContent === 'Show Scores' ? evt.target.textContent = 'Hide Scores' : evt.target.textContent = 'Show Scores'
   }
 
   return (
