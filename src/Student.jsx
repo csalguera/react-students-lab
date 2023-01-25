@@ -12,8 +12,7 @@ const Students = () => {
 
   function handleClick(evt) {
     let content = evt.target.textContent
-      content === 'Next' ? index === studentList.length - 1 ? setIndex(0) : setIndex(index + 1) :
-      index === 0 ? setIndex(studentList.length - 1) : setIndex(index - 1)
+    content === 'Next' ? index === studentList.length - 1 ? setIndex(0) : setIndex(index + 1) : index === 0 ? setIndex(studentList.length - 1) : setIndex(index - 1)
   }
 
   function toggleBio(evt) {
