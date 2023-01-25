@@ -18,17 +18,18 @@
 
 .details-container {
   display: flex;
-  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
   text-align: center;
 }
 
 .bio {
-  margin: 16px 0 0 256px;
+  margin: 16px 0 0 0;
   justify-self: flex-start;
 }
 
 .scores {
-  margin: 16px 256px 0 auto;
+  margin: 16px 0 0 0;
 }
 
 h1 {
