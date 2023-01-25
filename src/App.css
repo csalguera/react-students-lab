@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  user-select: none;
+}
+
 .bio,
 .scores {
   width: 400px;
